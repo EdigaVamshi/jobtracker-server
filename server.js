@@ -40,7 +40,7 @@ app.post('/applied-jobs', async (req, res) => {
     }
 });
 
-app.patch('/appplied-jobs/:id', async (req, res) => {
+app.patch('/applied-jobs/:id', async (req, res) => {
     try {
         const job = await JobApplication.findOne({ _id: req.params.id });
         if (!job) return res.status(404).json({ message: 'Job application not found' });
